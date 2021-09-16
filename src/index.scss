@@ -47,11 +47,7 @@ body {
 // Title Wrapper
 #game-board-wrapper,
 #game-info-wrapper {
-  padding: 0 24px;
-}
-
-#game-board-wrapper {
-  padding-bottom: 24px;
+  padding: 0 24px 24px 24px;
 }
 
 .square {
@@ -92,9 +88,15 @@ body {
     border-radius: 0 0 $board-raidus 0;
   }
 }
+
 #game-info-wrapper {
   flex-direction: column;
 }
+
+//#game-info-wrapper, #timeline, #snapshots, #snapshots > div {
+//  height: 100%;
+//}
+
 .game-info__section:not(:last-of-type) {
   margin-bottom: 24px;
 }
@@ -117,10 +119,12 @@ body {
       color: #107c10;
     }
   }
+
   &.tie {
     .game-info__status {
       color: #d83b01;
     }
+
     .game-info__status-state {
       visibility: hidden;
     }
@@ -143,9 +147,21 @@ body {
 }
 
 #snapshots {
-  width: fit-content;
 
   button:not(:last-child) {
     margin-bottom: 4px;
   }
+}
+
+.thumb-57 {
+  transition: border 100ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  border-width: 3px;
+}
+
+.ms-Slider:hover .thumb-57 {
+  border-width: 1px;
+}
+
+.ms-Slider:active .thumb-57 {
+  border-width: 5px;
 }
