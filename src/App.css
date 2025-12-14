@@ -1,0 +1,78 @@
+:root {
+    --corner-radius: clamp(18px, 3vmin, 28px);
+    --square-size: 96px;
+    --gap: 2px;
+
+    /* Color tokens (dark-mode defaults) */
+    --board-bg: rgba(255, 255, 255, 0.04);
+    --square-bg: rgba(255, 255, 255, 0.04);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Light-mode overrides */
+        --board-bg: rgba(0, 0, 0, 0.1);
+        --square-bg: rgba(0, 0, 0, 0.1);
+    }
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.status {
+    margin-bottom: 24px;
+}
+
+.square {
+    height: var(--square-size);
+    width: var(--square-size);
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-grid;
+    place-items: center;
+    background: var(--square-bg);
+}
+
+.square:focus {
+    outline: none;
+}
+
+/* Grid-based board: 3 columns, uniform gap between all squares */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, var(--square-size));
+    grid-auto-rows: var(--square-size);
+    gap: var(--gap);
+    padding: calc(var(--gap) + 8px);
+    background: var(--board-bg);
+    border-radius: calc(var(--corner-radius) + 8px);
+}
+
+/* Corners for flattened grid (1-based indexing):
+   1 2 3
+   4 5 6
+   7 8 9 */
+.board > .square:nth-child(1) {
+    border-top-left-radius: var(--corner-radius);
+    border-start-start-radius: var(--corner-radius);
+}
+
+.board > .square:nth-child(3) {
+    border-top-right-radius: var(--corner-radius);
+    border-start-end-radius: var(--corner-radius);
+}
+
+.board > .square:nth-child(7) {
+    border-bottom-left-radius: var(--corner-radius);
+    border-end-start-radius: var(--corner-radius);
+}
+
+.board > .square:nth-child(9) {
+    border-bottom-right-radius: var(--corner-radius);
+    border-end-end-radius: var(--corner-radius);
+}
