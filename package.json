@@ -1,25 +1,22 @@
 {
-  "name": "react-tutorial",
+  "name": "react-tutorial-tic-tac-toe",
   "version": "0.2.0",
-  "description": "Following along with the react.dev tutorial.",
-  "author": "Anthony Swierkosz",
-  "homepage": "https://github.com/aisgbnok/react-tutorial",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aisgbnok/react-tutorial.git"
-  },
-  "license": "UNLICENSED",
   "private": true,
+  "description": "Following along with the react.dev tutorial.",
+  "homepage": "https://github.com/aisgbnok/react-tutorial",
+  "repository": "https://github.com/aisgbnok/react-tutorial.git",
+  "license": "UNLICENSED",
+  "author": "Anthony Swierkosz",
   "main": "/src/index.js",
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-scripts": "^5.0.1"
   },
   "browserslist": {

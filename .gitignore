@@ -1,6 +1,5 @@
-# NodeJS dependencies
+# NodeJS Dependencies
 /node_modules/
 
-# IntelliJ project files
+# JetBrains IDEs
 .idea/
-
