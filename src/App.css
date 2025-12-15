@@ -27,6 +27,7 @@
 }
 
 .square {
+    font-size: 3em;
     height: var(--square-size);
     width: var(--square-size);
     text-box-trim: trim-both;
