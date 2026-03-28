@@ -5,11 +5,11 @@
   "license": "UNLICENSED",
   "main": "/src/index.js",
   "dependencies": {
-    "@fluentui/react": "^8.125.3",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
+    "@fluentui/react": "^8.125.5",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-scripts": "^5.0.1",
-    "sass": "^1.96.0"
+    "sass": "^1.98.0"
   },
   "scripts": {
     "start": "react-scripts start",
